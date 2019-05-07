@@ -2,15 +2,16 @@ all: test
 
 clean:
 	rm -f get-started-go
+	rm -rf vendor/
 
 install: prepare
-	godep go install
+	go install
 
 prepare:
-	go get github.com/tools/godep
+	go mod vendor
 
 build: prepare
-	godep go build
+	go build
 
 test: prepare build
 	echo "no tests"

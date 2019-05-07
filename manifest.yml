@@ -3,3 +3,6 @@ applications:
 - name: GetStartedGo
   random-route: true
   memory: 128M
+  env:
+    GOVERSION: go1.11
+    GOPACKAGENAME: github.com/matthewrankin/get-started-go
